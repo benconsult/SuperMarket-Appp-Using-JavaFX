@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="632.0" style="-fx-background-color: #5090bf;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.OrderController">
+   <children>
+      <JFXTextField fx:id="paymentmode" blendMode="COLOR_BURN" layoutX="31.0" layoutY="129.0" text="PayMode:" />
+      <JFXTextField fx:id="receiptid" blendMode="COLOR_BURN" layoutX="31.0" layoutY="94.0" text="ReceiptID:" />
+      <JFXTextField fx:id="tendering" blendMode="COLOR_BURN" layoutX="31.0" layoutY="165.0" text="Tendering(#):" />
+      <JFXTextField fx:id="change" blendMode="COLOR_BURN" layoutX="31.0" layoutY="210.0" text="Change(#):" />
+      <JFXTextField fx:id="issued" blendMode="COLOR_BURN" layoutX="31.0" layoutY="339.0" text="Issued By:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="amount" blendMode="COLOR_BURN" layoutX="247.0" layoutY="339.0" prefHeight="25.0" prefWidth="364.0" text="AMOUNT IN WORDS:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="total" blendMode="COLOR_BURN" layoutX="112.0" layoutY="262.0" text="TOTAL(#):">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="save" blendMode="COLOR_BURN" layoutX="520.0" layoutY="274.0" onAction="#saveHandle" text="SAVE  ORDER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="print" blendMode="COLOR_BURN" layoutX="520.0" layoutY="305.0" onAction="#printHandle" text="PREVIEW ORDER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView blendMode="COLOR_BURN" fitHeight="79.0" fitWidth="586.0" layoutX="31.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pics/Shopping%20Cart_48px.png" />
+         </image>
+      </ImageView>
+      <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" layoutX="174.0" layoutY="6.0" prefHeight="48.0" prefWidth="314.0" text="ORDER YOUR GOODS">
+         <font>
+            <Font name="System Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgClose" blendMode="OVERLAY" fitHeight="28.0" fitWidth="18.0" layoutX="611.0" layoutY="12.0" onMouseClicked="#handleExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pics/remove-button.png" />
+         </image>
+      </ImageView>
+      <DatePicker blendMode="COLOR_BURN" layoutX="505.0" layoutY="21.0" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #1b8198;" />
+      <JFXTextArea fx:id="textOutput" layoutX="443.0" layoutY="99.0" prefHeight="158.0" prefWidth="173.0" />
+      <JFXTextArea fx:id="textarea" layoutX="223.0" layoutY="98.0" prefHeight="158.0" prefWidth="198.0" />
+      <Label blendMode="COLOR_BURN" layoutX="223.0" layoutY="72.0" prefHeight="17.0" prefWidth="198.0" text="NO    PRODUCTS    PRICE(#)" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorSupplier" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="720.0" style="-fx-background-color: #5090bf;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.SupplierController">
+   <children>
+      <Pane fx:id="paneUp" prefHeight="621.0" prefWidth="200.0">
+         <children>
+            <JFXButton fx:id="btnBrowse" layoutX="129.0" layoutY="206.0" onAction="#chooseImageButtonPushed" prefHeight="29.0" prefWidth="71.0" text="Browse">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="photos" blendMode="COLOR_BURN" fitHeight="133.0" fitWidth="162.0" layoutX="18.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pics/Supplier_48px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="3.0" layoutY="212.0" prefHeight="17.0" prefWidth="124.0" text="Upload Supplier Image" />
+            <JFXTextField fx:id="txtId" blendMode="SCREEN" layoutX="5.0" layoutY="275.0" prefHeight="25.0" prefWidth="192.0" promptText="SUPPLIERID" />
+            <JFXTextField fx:id="txtFirstname" blendMode="SCREEN" layoutX="4.0" layoutY="311.0" prefHeight="25.0" prefWidth="192.0" promptText="FIRSTNAME" />
+            <JFXTextField fx:id="txtEmail" blendMode="SCREEN" layoutX="5.0" layoutY="392.0" prefHeight="25.0" prefWidth="192.0" promptText="EMAIL" />
+            <JFXTextField fx:id="txtLast" blendMode="SCREEN" layoutX="4.0" layoutY="342.0" prefHeight="25.0" prefWidth="192.0" promptText="LASTNAME" />
+            <JFXTextField fx:id="txtCoy" blendMode="SCREEN" layoutX="3.0" layoutY="367.0" prefHeight="25.0" prefWidth="192.0" promptText="COMPANY NAME" />
+            <JFXTextField fx:id="txtPhone" blendMode="SCREEN" layoutX="5.0" layoutY="417.0" prefHeight="25.0" prefWidth="192.0" promptText="PHONE NUMBER" />
+            <JFXTextField fx:id="txtAddress" blendMode="SCREEN" layoutX="5.0" layoutY="450.0" prefHeight="17.0" prefWidth="192.0" promptText="ADDRESS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtPhoto" blendMode="SCREEN" layoutX="4.0" layoutY="475.0" prefHeight="25.0" prefWidth="192.0" promptText="PHOTO(optional)" />
+            <JFXButton fx:id="btnDelete" blendMode="COLOR_BURN" layoutX="12.0" layoutY="551.0" onAction="#handleDeleteButton" text="Delete">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/Trash_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton fx:id="btnSave" blendMode="COLOR_BURN" layoutX="12.0" layoutY="526.0" onAction="#handleSaveButton" text="Add Supplier">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/Save%20All_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton fx:id="btnCLear" blendMode="COLOR_BURN" layoutX="1.0" layoutY="574.0" onAction="#handleClearButton" prefHeight="25.0" prefWidth="84.0" text="Clear">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/Refresh_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton fx:id="loady" blendMode="COLOR_BURN" layoutX="85.0" layoutY="574.0" onAction="#handleLoad" prefHeight="25.0" prefWidth="118.0" text="Update Image">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/Save%20All_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label layoutX="22.0" layoutY="234.0" text="(optional)" />
+            <Label layoutX="5.0" layoutY="41.0" prefHeight="29.0" prefWidth="162.0" text="ADD NEW SUPPLIER">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="37.0" layoutY="137.0" prefHeight="17.0" prefWidth="98.0" text="Put Image Here" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneDown" layoutX="205.0" layoutY="45.0" prefHeight="555.0" prefWidth="514.0">
+         <children>
+            <TableView fx:id="table" prefHeight="553.0" prefWidth="514.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="21.0" text="ID" />
+                <TableColumn fx:id="colFirst" prefWidth="77.0" text="FIRSTNAME" />
+                  <TableColumn fx:id="colLast" prefWidth="69.0" text="LASTNAME" />
+                  <TableColumn fx:id="colCoy" prefWidth="75.0" text="COMPANY" />
+                  <TableColumn fx:id="colEmail" prefWidth="55.0" text="EMAIL" />
+                  <TableColumn fx:id="colPhone" text="TELEPHONE" />
+                  <TableColumn fx:id="colAdd" prefWidth="58.0" text="ADDRESS" />
+                  <TableColumn fx:id="colPhoto" prefWidth="76.0" text="PHOTO" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Label blendMode="COLOR_BURN" layoutX="297.0" layoutY="6.0" prefHeight="32.0" prefWidth="228.0" text="SUPPLIERS DETAIL">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnExit" blendMode="COLOR_BURN" layoutX="671.0" layoutY="2.0" onAction="#handleExit" text="Exit">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

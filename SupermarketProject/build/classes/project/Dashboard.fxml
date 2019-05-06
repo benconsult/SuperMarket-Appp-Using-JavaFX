@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="519.0" prefWidth="600.0" style="-fx-background-color: #306186;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="project.DashboardController">
+   <children>
+      <Pane layoutX="91.0" layoutY="80.0" prefHeight="395.0" prefWidth="489.0" style="-fx-background-color: #5090bf;">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="123.0" prefWidth="154.0" style="-fx-background-color: #306186;">
+               <children>
+                  <ImageView blendMode="COLOR_DODGE" fitHeight="59.0" fitWidth="89.0" layoutX="48.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/Product_48px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnProduct" layoutX="41.0" layoutY="90.0" onAction="#handleProducts" text="open page" textFill="#f1f3f8" />
+                  <Label layoutX="48.0" layoutY="6.0" prefHeight="17.0" prefWidth="73.0" text="Products" textFill="#f8f7f7">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="321.0" layoutY="258.0" prefHeight="123.0" prefWidth="154.0" style="-fx-background-color: #306186;">
+               <children>
+                  <ImageView blendMode="COLOR_DODGE" fitHeight="59.0" fitWidth="89.0" layoutX="48.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/Customer_48px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="41.0" layoutY="6.0" prefHeight="21.0" prefWidth="82.0" text="Customers" textFill="#f8f7f7">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnCustomers" layoutX="41.0" layoutY="91.0" onAction="#handleCustomers" text="open page" textFill="#f1f3f8" />
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="258.0" prefHeight="123.0" prefWidth="154.0" style="-fx-background-color: #306186;">
+               <children>
+                  <ImageView blendMode="COLOR_DODGE" fitHeight="59.0" fitWidth="89.0" layoutX="48.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/Supplier_48px_1.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnSupplier" layoutX="41.0" layoutY="90.0" onAction="#handleSupplers" text="open page" textFill="#f1f3f8" />
+                  <Label layoutX="48.0" layoutY="6.0" prefHeight="17.0" prefWidth="73.0" text="Suppliers" textFill="#f8f7f7">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="321.0" layoutY="14.0" prefHeight="123.0" prefWidth="154.0" style="-fx-background-color: #306186;">
+               <children>
+                  <ImageView blendMode="COLOR_DODGE" fitHeight="59.0" fitWidth="89.0" layoutX="48.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/In%20Inventory_48px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnInventory" layoutX="41.0" layoutY="90.0" onAction="#handleInventory" text="open page" textFill="#f1f3f8" />
+                  <Label layoutX="48.0" layoutY="6.0" prefHeight="17.0" prefWidth="73.0" text="Inventory" textFill="#f8f7f7">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="168.0" layoutY="136.0" prefHeight="123.0" prefWidth="154.0" style="-fx-background-color: #306186;">
+               <children>
+                  <ImageView blendMode="COLOR_DODGE" fitHeight="59.0" fitWidth="89.0" layoutX="48.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/Shopping%20Cart_48px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnOrders" layoutX="41.0" layoutY="90.0" onAction="#handleOrders" text="open page" textFill="#f1f3f8" />
+                  <Label layoutX="58.0" layoutY="6.0" prefHeight="17.0" prefWidth="73.0" text="Orders" textFill="#f8f7f7">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label layoutX="91.0" layoutY="49.0" prefHeight="17.0" prefWidth="175.0" text="Dashboard Actions" textFill="#eeebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView blendMode="COLOR_DODGE" fitHeight="25.0" fitWidth="21.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pics/images%20(12).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="4.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pics/Exit_48px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="4.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pics/Home_48px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="565.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pics/Outdent_48px.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="btnHome" blendMode="LIGHTEN" layoutX="24.0" layoutY="86.0" onMouseClicked="#handleHome" prefHeight="17.0" prefWidth="34.0" text="Home" textFill="#f8f4f4" />
+      <Label fx:id="btnExit" blendMode="LIGHTEN" layoutX="21.0" layoutY="112.0" onDragDetected="#handleExit" onMouseClicked="#handleExit" text="Exit" textFill="#eeeaea" />
+      <Label layoutX="522.0" layoutY="13.0" textFill="#f8f4f4" />
+      <Label blendMode="LIGHTEN" layoutX="31.0" layoutY="6.0" text="Prime Supermarket" textFill="#f8f4f4" />
+   </children>
+</AnchorPane>

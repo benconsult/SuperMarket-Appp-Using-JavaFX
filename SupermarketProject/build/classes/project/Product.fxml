@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorProduct" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="650.0" style="-fx-background-color: #1e4676;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.ProductController">
+   <children>
+      <Pane fx:id="paneUp" prefHeight="482.0" prefWidth="650.0">
+         <children>
+            <TableView fx:id="tableProduct" layoutX="148.0" layoutY="90.0" prefHeight="389.0" prefWidth="500.0" style="-fx-background-color: #1e4676;">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="26.0" text="ID" />
+                <TableColumn fx:id="colBnam" prefWidth="95.0" text="BATCH NAME" />
+                  <TableColumn fx:id="colProdn" prefWidth="98.0" text="PRODUCTNAME" />
+                  <TableColumn fx:id="colQty" prefWidth="66.0" text="QUANTITY" />
+                  <TableColumn fx:id="colCprice" prefWidth="93.0" text="COST PRICE (#)" />
+                  <TableColumn fx:id="colSprice" prefWidth="109.0" text="SELLING PRICE(#)" />
+              </columns>
+               <effect>
+                  <Blend />
+               </effect>
+            </TableView>
+            <ImageView blendMode="ADD" fitHeight="63.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pics/Product_48px.png" />
+               </image>
+            </ImageView>
+            <Label blendMode="OVERLAY" layoutX="278.0" layoutY="17.0" prefHeight="30.0" prefWidth="253.0" text="PRODUCTS">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+            <JFXTextField fx:id="txtSearch" blendMode="OVERLAY" layoutX="118.0" layoutY="32.0" onKeyReleased="#handleSearch" prefHeight="30.0" prefWidth="115.0" promptText="search product" />
+            <ImageView blendMode="BLUE" fitHeight="19.0" fitWidth="21.0" layoutX="615.0" layoutY="6.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pics/remove-symbol.png" />
+               </image>
+            </ImageView>
+            <JFXListView fx:id="listview" layoutY="100.0" prefHeight="382.0" prefWidth="151.0" style="-fx-background-color: #1e4676;" />
+            <Label layoutX="9.0" layoutY="81.0" prefHeight="17.0" prefWidth="134.0" text="Quick Product Lists">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font></Label>
+            <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="206.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pics/Search_48px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneDown" layoutY="484.0" prefHeight="129.0" prefWidth="639.0">
+         <children>
+            <Label blendMode="OVERLAY" layoutX="8.0" layoutY="6.0" prefHeight="17.0" prefWidth="151.0" text="ADD NEW PRODUCTS">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <JFXButton fx:id="btnClear" blendMode="OVERLAY" layoutX="551.0" layoutY="65.0" onAction="#handleClear" prefHeight="30.0" prefWidth="79.0" text="CLEAR">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></JFXButton>
+            <JFXTextField fx:id="txtBname" layoutX="8.0" layoutY="85.0" promptText="BATCH NAME" />
+            <JFXTextField fx:id="txtPname" layoutX="185.0" layoutY="30.0" promptText="PRODUCT NAME" />
+            <JFXTextField fx:id="txtId" layoutX="8.0" layoutY="30.0" promptText="PRODUCT ID" />
+            <JFXTextField fx:id="txtQty" layoutX="185.0" layoutY="85.0" promptText="QUANTITY" />
+            <JFXTextField fx:id="txtSp" layoutX="372.0" layoutY="85.0" promptText="SELLING PRICE" />
+            <JFXTextField fx:id="txtCp" layoutX="379.0" layoutY="30.0" promptText="COST PRICE" />
+            <JFXButton fx:id="btnDelete" blendMode="OVERLAY" layoutX="559.0" layoutY="95.0" onAction="#handleDelete" prefHeight="30.0" prefWidth="71.0" text="DELETE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btnAdd" blendMode="OVERLAY" layoutX="544.0" layoutY="33.0" onAction="#handleAdd" prefHeight="35.0" prefWidth="79.0" text="ADD">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

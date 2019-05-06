@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorCustomer" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="627.0" style="-fx-background-color: #5090bf;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.CustomerController">
+   <children>
+      <Pane fx:id="paneFirst" layoutY="94.0" prefHeight="506.0" prefWidth="164.0">
+         <children>
+            <JFXTextField fx:id="txtId" layoutX="7.0" layoutY="83.0" prefHeight="25.0" prefWidth="150.0" promptText="CUSTOMERID">
+               <padding>
+                  <Insets bottom="6.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFname" layoutX="7.0" layoutY="115.0" prefHeight="25.0" prefWidth="150.0" promptText="FIRSTNAME">
+               <padding>
+                  <Insets bottom="6.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="txtLname" layoutX="7.0" layoutY="148.0" prefHeight="25.0" prefWidth="150.0" promptText="LASTNAME">
+               <padding>
+                  <Insets bottom="6.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="txtJtitle" layoutX="10.0" layoutY="181.0" prefHeight="25.0" prefWidth="150.0" promptText="JOB TITLE">
+               <padding>
+                  <Insets bottom="6.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPnum" layoutX="10.0" layoutY="216.0" prefHeight="25.0" prefWidth="150.0" promptText="PHONE NUMBER">
+               <padding>
+                  <Insets bottom="6.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAddress" layoutX="7.0" layoutY="247.0" prefHeight="25.0" prefWidth="150.0" promptText="ADDRESS">
+               <padding>
+                  <Insets bottom="6.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="txtSx" layoutX="10.0" layoutY="282.0" prefHeight="17.0" prefWidth="150.0" promptText="SEX">
+               <padding>
+                  <Insets bottom="6.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </JFXTextField>
+            <Label layoutX="7.0" prefHeight="30.0" prefWidth="150.0" text="ADD NEW CUSTOMER">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnDel" layoutX="10.0" layoutY="413.0" onAction="#handleDelete" prefHeight="27.0" prefWidth="135.0" text="DELETE RECORD">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/Trash_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnSave" layoutX="7.0" layoutY="380.0" onAction="#handleSave" prefHeight="27.0" prefWidth="135.0" text="SAVE  RECORD">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/Save%20All_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnRefresh" layoutX="10.0" layoutY="446.0" onAction="#handleRefresh" prefHeight="27.0" prefWidth="135.0" text="REFRESH RECORD">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/Refresh_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXRadioButton fx:id="radioFemale" layoutX="22.0" layoutY="322.0" onMouseClicked="#radioFemale" prefHeight="17.0" prefWidth="80.0" text="Female" />
+            <JFXRadioButton fx:id="radioMale" layoutX="24.0" layoutY="347.0" onMouseClicked="#handleMale" text="Male" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneSec" layoutX="162.0" layoutY="96.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="458.0">
+         <children>
+            <TableView fx:id="table" prefHeight="482.0" prefWidth="458.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="34.0" text="ID" />
+                <TableColumn fx:id="colFna" prefWidth="96.0" text="FIRSTNAME" />
+                  <TableColumn fx:id="colLn" prefWidth="79.0" text="LASTNAME" />
+                  <TableColumn fx:id="colJt" prefWidth="73.0" text="JOBTITTLE" />
+                  <TableColumn fx:id="colPhn" prefWidth="69.0" text="PHONE" />
+                  <TableColumn fx:id="colAddress" prefWidth="69.0" text="ADDRESS" />
+                  <TableColumn fx:id="colSex" minWidth="0.0" prefWidth="51.0" text="SEX" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="199.0" layoutY="26.0" prefHeight="39.0" prefWidth="303.0" text="CUSTOMER RECORDS">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSearch" layoutX="162.0" layoutY="65.0" onKeyReleased="#handleSearch" promptText="Search Records" />
+      <ImageView fx:id="imgClose" blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="26.0" layoutX="596.0" layoutY="9.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pics/Close%20Window_48px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="19.0" fitWidth="35.0" layoutX="264.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pics/Search_48px.png" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="SCREEN" fitHeight="79.0" fitWidth="135.0" layoutX="7.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pics/Customer_48px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
